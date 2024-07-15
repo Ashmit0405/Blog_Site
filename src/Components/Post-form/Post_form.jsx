@@ -34,7 +34,6 @@ export default function PostForm({post}){
             if(file){
                 const fileid=file.$id;
                 data.image=fileid;
-                console.log(data.image);
                 const dbPost=await serv.createpost({...data,userid: userdata.$id});
                 console.log(dbPost);
                 if(dbPost){
